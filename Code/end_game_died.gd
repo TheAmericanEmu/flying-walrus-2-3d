@@ -84,7 +84,6 @@ var score_chart={
 var score_list = []
 var agent_name=walrus_names.pick_random()
 
-settings={}
 
 func display_full_report():
 	misson_report.show()
@@ -176,8 +175,8 @@ func create_battle_report(kills_dict:Dictionary):
 	if(randi_range(0,100)==1):
 		$Control/Mission_Report/returnMenu.text="Return To Monkey"
 	hide_everything()
-	if(get_online_mode()):
-		
+	#if(get_online_mode()):
+		#pass
 	write_to_save_file(score,score*score_to_cash,total_kills)
 	
 	
@@ -229,11 +228,11 @@ func get_game_server():
 	var data = JSON.parse_string(save_file.get_as_text())
 	return data["web_server_address"]
 	
-func get_online_mode():
-	var save_game_path="user://user_data//config.json"
-	var save_file = FileAccess.open(save_game_path,FileAccess.READ)
-	var data = JSON.parse_string(save_file.get_as_text())
-	return data["use_online_mode"]
+#func get_online_mode():
+	#var save_game_path="user://user_data//config.json"
+	#var save_file = FileAccess.open(save_game_path,FileAccess.READ)
+	#var data = JSON.parse_string(save_file.get_as_text())
+	#return data["use_online_mode"]
 	
 func upload_data(data):
 	var http_request:HTTPRequest = HTTPRequest.new()

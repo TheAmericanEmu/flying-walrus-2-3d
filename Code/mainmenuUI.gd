@@ -83,6 +83,7 @@ var config_template={
 }
 
 func create_account():
+	pass
 
 func check_config():
 	

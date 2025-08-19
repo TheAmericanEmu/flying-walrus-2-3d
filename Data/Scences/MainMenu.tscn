@@ -135,7 +135,6 @@ menu_panel = NodePath("Main Menu")
 credit_label = NodePath("Credits/ScrollContainer/Credits")
 button_hovered = NodePath("../MainCam/button_hovered")
 ani_time = 1.0
-interval = null
 title = NodePath("../Title")
 
 [node name="Main Menu" type="Panel" parent="MainMenuUI"]
@@ -336,6 +335,7 @@ text = "Credits"
 label_settings = SubResource("LabelSettings_rw2xk")
 
 [node name="Online_Ofline" type="Panel" parent="MainMenuUI"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

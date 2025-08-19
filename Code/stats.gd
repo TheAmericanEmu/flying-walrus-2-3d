@@ -44,7 +44,7 @@ func _ready() -> void:
 			temp.set_text(0,key)
 			temp.set_text(1,str(data["total_stats"][key]))
 	if(do_online):
-		
+		pass
 
 
 func _on_return_pressed() -> void:
