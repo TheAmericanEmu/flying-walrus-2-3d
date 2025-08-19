@@ -1,0 +1,14 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://dbtsbo53rul1m"]
+
+[resource]
+inherit_velocity_ratio = 1.315
+direction = Vector3(0.3, -1, 0)
+spread = 0.0
+initial_velocity_min = 90.0
+initial_velocity_max = 90.0
+scale_min = 0.0
+scale_max = 0.1
+scale_over_velocity_min = 85.05
+scale_over_velocity_max = 418.37
+color = Color(1, 1, 1, 0)
+turbulence_enabled = true

@@ -1,0 +1,169 @@
+{
+  "Crew": {
+	"Programmers": [
+	  "Colin \"TheAmericanEmu\" Harrington-Ding"
+	],
+	"Supporters": [
+	  "My Girlfriend"
+	],
+	"Play Testers": [
+	  "Dino223667",
+	  "vivi176chaos",
+	  "My Girlfriend"
+	]
+  },
+  "Game Assets": {
+	"Meshes": [
+	  {
+		"name": "Cloud",
+		"creator": "Poly by Google",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/44cGXp6_8WD"
+	  },
+	  {
+		"name": "Walrus",
+		"creator": "Poly by Google",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/2ivrvruGzxc"
+	  },
+	  {
+		"name": "Killer Whale",
+		"creator": "Poly by Google",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/7pqZEQ9b_E-"
+	  },
+	  {
+		"name": "Jetpack",
+		"creator": "Roman Miller",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/8VafbXInymc"
+	  },
+	  {
+		"name": "Grave Stone",
+		"creator": "Jarlan Perez",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/4wvz0NJ33k3"
+	  },
+	  {
+		"name": "Trumpet",
+		"creator": "Poly by Google",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/dKjB2Gm4-rj"
+	  },
+	  {
+		"name": "Blackboard",
+		"creator": "jeremy",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/duhtFXbJCfc"
+	  },
+	  {
+		"name": "Hat",
+		"creator": "Cael Wood",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/2Givq4Q3YTH"
+	  },
+	  {
+		"name": "Orchid",
+		"creator": "Poly by Google",
+		"license": "CC-BY",
+		"url": "https://poly.pizza/m/ef9ozEPNGk5"
+	  }
+	],
+	"UI": [
+	  {
+		"name": "Skull & Battery",
+		"creator": "SunGraphica",
+		"license": "Unknown",
+		"url": ""
+	  },
+	  {
+		"name": "PS4 Buttons",
+		"creator": "ArksDigital",
+		"license": "CC BY 4.0",
+		"url": "https://creativecommons.org/licenses/by/4.0/"
+	  }
+	],
+	"Sound": [
+	  {
+		"name": "Good Jetpack sound Loop",
+		"creator": "MostyXS",
+		"license": "CC0",
+		"url": "https://freesound.org/s/512815/"
+	  },
+	  {
+		"name": "missile_explosion.wav",
+		"creator": "smcameron",
+		"license": "Attribution 4.0",
+		"url": "https://freesound.org/s/51467/"
+	  },
+	  {
+		"name": "Main Theme.mp3",
+		"creator": "Cnupoc",
+		"license": "CC0",
+		"url": "https://freesound.org/s/449640/"
+	  },
+	  {
+		"name": "damage",
+		"creator": "ash_rez",
+		"license": "CC0",
+		"url": "https://freesound.org/s/518887/"
+	  },
+	  {
+		"name": "Hurt00.wav",
+		"creator": "jeremysykes",
+		"license": "CC0",
+		"url": "https://freesound.org/s/341245/"
+	  },
+	  {
+		"name": "gun lee enfield 303 rifle fire shot loud badass crispy.wav",
+		"creator": "kyles",
+		"license": "CC0",
+		"url": "https://freesound.org/s/450852/"
+	  },
+	  {
+		"name": "Spinning motor; close.wav",
+		"creator": "cfedorek16",
+		"license": "CC0",
+		"url": "https://freesound.org/s/660560/"
+	  },
+	  {
+		"name": "Bam.wav",
+		"creator": "Augdog",
+		"license": "Attribution 4.0",
+		"url": "https://freesound.org/s/210164/"
+	  },
+	  {
+		"name": "Coin Ca-ching!",
+		"creator": "AKkingStudio",
+		"license": "CC0",
+		"url": "https://freesound.org/s/684165/"
+	  },
+	  {
+		"name": "btn_hover.wav",
+		"creator": "rayolf",
+		"license": "CC0",
+		"url": "https://freesound.org/s/405160/"
+	  },
+	  {
+		"name": "music elevator",
+		"creator": "Jay_You",
+		"license": "Attribution 4.0",
+		"url": "https://freesound.org/s/460432/"
+	  }
+	],
+	"Fonts": [
+	  {
+		"name": "TypeWriter Font",
+		"creator": "Q_x",
+		"license": "CC0",
+		"url": "https://opengameart.org/content/old-typewriter-font"
+	  },
+	  {
+		"name": "Howdybun",
+		"creator": "mabro",
+		"license": "CC0",
+		"url": "https://www.dafont.com/howdybun.font"
+	  }
+	]
+  }
+}

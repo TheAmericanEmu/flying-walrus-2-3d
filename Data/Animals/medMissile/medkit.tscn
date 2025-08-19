@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bx1ow0plml4go"]
+
+[ext_resource type="Script" uid="uid://o8poyth2wtfb" path="res://Code/medkit.gd" id="1_esp1e"]
+[ext_resource type="PackedScene" uid="uid://cm3i47urc73qc" path="res://Data/BackgroundObjects/Medkit/medkit.fbx" id="2_5fe1y"]
+[ext_resource type="ArrayMesh" uid="uid://kgjbw3l1sk0v" path="res://Data/BackgroundObjects/rocket/model.obj" id="3_j5e3b"]
+[ext_resource type="Material" uid="uid://dbtsbo53rul1m" path="res://Data/Particles/Jetpack.tres" id="4_6c7k6"]
+[ext_resource type="AudioStream" uid="uid://deyjlc6hj12bb" path="res://Data/Sound/JetBackAccel.mp3" id="5_4k3f6"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_gbmhl"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nyqxb"]
+size = Vector3(2.22168, 1.30078, 3.94043)
+
+[node name="medkit" type="RigidBody3D" groups=["Killable"]]
+collision_layer = 7
+collision_mask = 7
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+contact_monitor = true
+max_contacts_reported = 100
+script = ExtResource("1_esp1e")
+
+[node name="medkit" parent="." instance=ExtResource("2_5fe1y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0475931, 0.206331, 0.0226304)
+
+[node name="Rocket" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.00401184, -0.34617, 0, 0.560629, 0.00247718, 0, 0, 0, 0.48873, 0.166062, -0.25485, 0.0206673)
+mesh = ExtResource("3_j5e3b")
+
+[node name="Left" type="GPUParticles3D" parent="Rocket"]
+transform = Transform3D(0.999999, -1.58325e-08, -2.84217e-14, 1.30385e-08, 0.999999, -1.42109e-14, -1.42109e-14, -1.42109e-14, 1, -0.0683035, -1.7964, -0.0962275)
+amount = 20
+process_material = ExtResource("4_6c7k6")
+draw_pass_1 = SubResource("SphereMesh_gbmhl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_nyqxb")
+
+[node name="run" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_4k3f6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

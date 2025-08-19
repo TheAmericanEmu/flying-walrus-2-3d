@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cy370sadd72qx"]
+
+[ext_resource type="Texture2D" uid="uid://bghoiby2kxnk0" path="res://Data/UI/background/cloud.png" id="1_arp5d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7s70f"]
+content_margin_left = 733.0
+content_margin_top = 414.0
+content_margin_right = 290.0
+content_margin_bottom = 279.0
+texture = ExtResource("1_arp5d")
+expand_margin_left = 90.0
+expand_margin_top = 99.0
+expand_margin_right = 90.0
+expand_margin_bottom = 70.0
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_7s70f")

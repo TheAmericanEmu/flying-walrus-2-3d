@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cvuhdjwowyaob"]
+
+[ext_resource type="FontFile" uid="uid://fdu4frumjhyv" path="res://Data/Fonts/Howdybun.ttf" id="1_6c2s7"]
+
+[resource]
+font = ExtResource("1_6c2s7")
+font_size = 100

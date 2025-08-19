@@ -1,0 +1,124 @@
+[gd_scene load_steps=13 format=3 uid="uid://ckr54y7e2dh14"]
+
+[ext_resource type="Script" uid="uid://bkkkhq45ylqu5" path="res://CutSceneManger.gd" id="1_scv4h"]
+[ext_resource type="PackedScene" uid="uid://ba84fi1e7ype4" path="res://Data/BackgroundObjects/Room/room.blend" id="2_d36bb"]
+[ext_resource type="Texture2D" uid="uid://bc4jofnaug3cm" path="res://Data/Animals/Walrus/Tex_Walrus.png" id="3_x81f7"]
+[ext_resource type="ArrayMesh" uid="uid://j47j5vs04502" path="res://Data/Animals/Walrus/Mesh_Walrus.obj" id="4_606l1"]
+[ext_resource type="ArrayMesh" uid="uid://4xul2sdwqs8d" path="res://Data/Hats/FrogHat/FrogHat.obj" id="5_r2ir1"]
+[ext_resource type="ArrayMesh" uid="uid://dj1n0fmwvc5ht" path="res://Data/Hats/TopHat/model.obj" id="6_x81f7"]
+[ext_resource type="ArrayMesh" uid="uid://b3o3g45mu3mot" path="res://Data/Tools/Jetback/model.obj" id="7_606l1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3p3qk"]
+albedo_texture = ExtResource("3_x81f7")
+
+[sub_resource type="Animation" id="Animation_qf6ov"]
+resource_name = "CutScene"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DrFrog")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0.666667, 1, 0, -5.83828, 23.1568)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SirNigelTuskton")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0.666667, 1, -1.42319, -5.79688, 28.0325)
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".nextLine()")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_x81f7"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SirNigelTuskton")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.42319, -5.79688, 28.0325)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DrFrog")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_38fjb"]
+_data = {
+&"CutScene": SubResource("Animation_qf6ov"),
+&"RESET": SubResource("Animation_x81f7")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_scv4h"]
+font_size = 50
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_scv4h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="room" parent="." instance=ExtResource("2_d36bb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69041, -1.84902, 24.7735)
+
+[node name="DrFrog" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0139218, 0, 0.0143591, 0, 0.02, 0, -0.0143591, 0, 0.0139218, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_3p3qk")
+mesh = ExtResource("4_606l1")
+
+[node name="FrogHat" type="MeshInstance3D" parent="DrFrog"]
+transform = Transform3D(9.25195, 1.67297, 49.1081, -3.30583, 49.879, -1.07642, -49.0252, -3.04768, 9.34016, 1.11963, 54.8638, 98.4893)
+mesh = ExtResource("5_r2ir1")
+skeleton = NodePath("../..")
+
+[node name="SirNigelTuskton" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00785958, 0, 0.0183909, 0, 0.02, 0, -0.0183909, 0, -0.00785958, -1.42319, -5.79688, 28.0325)
+material_override = SubResource("StandardMaterial3D_3p3qk")
+mesh = ExtResource("4_606l1")
+
+[node name="Hat" type="MeshInstance3D" parent="SirNigelTuskton"]
+transform = Transform3D(-58.9469, 0, -137.932, 0, 150, 0, 137.932, 0, -58.9469, 1.59131, 77.6407, 105.547)
+mesh = ExtResource("6_x81f7")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_38fjb")
+}
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Sup my name is colin"
+label_settings = SubResource("LabelSettings_scv4h")
+horizontal_alignment = 1
+
+[node name="Model" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.29954, 0, -0.400345, 0, 0.5, 0, 0.400345, 0, 0.29954, 2.26523, -9.58459, 25.032)
+mesh = ExtResource("7_606l1")

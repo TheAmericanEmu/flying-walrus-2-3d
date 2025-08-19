@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://dplln5gwpscgt"]
+
+[ext_resource type="ArrayMesh" uid="uid://iuxa5hhtvqwd" path="res://Data/Animals/orca/Mesh_Orca.obj" id="1_3ceo4"]
+[ext_resource type="Script" uid="uid://csbn4rh2eenl3" path="res://Code/orca.gd" id="1_k137o"]
+[ext_resource type="Texture2D" uid="uid://ds3nka5xdo2w5" path="res://Data/Animals/orca/Tex_Orca.png" id="2_k137o"]
+[ext_resource type="AudioStream" uid="uid://c08254rk4gvw8" path="res://Data/Sound/boom.wav" id="4_38k8q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gqgtu"]
+albedo_texture = ExtResource("2_k137o")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k137o"]
+points = PackedVector3Array(-105.918, -91.1768, -283.851, -105.918, -73.3953, -283.851, 107.272, -91.1768, -274.946, 9.52877, 193.104, 18.1834, -123.691, -82.2722, 124.761, 116.17, -82.2722, 133.665, -8.17441, 193.104, 44.8417, -25.9245, 15.4562, 266.901, 107.272, -73.3953, -274.946, -123.691, -91.1768, 98.1025, 8.85763, -16.491, 270.353, 9.52877, -11.202, -230.534, 27.3024, 24.3609, 249.147, 116.17, -91.1768, 89.2535, -123.691, -73.3953, 124.761, 116.17, -73.3953, 133.665, -8.17441, 193.104, 18.1834, -105.918, -64.4907, -266.041, 98.3969, -73.3953, -283.851, 9.52877, 193.104, 35.937, -43.6982, 42.1145, 186.982, 116.17, -73.3953, 89.2535, -123.691, -73.3953, 98.1025, 18.4038, 24.3609, 258.052, -16.1407, -15.2206, 265.27, -8.17441, -11.202, -230.534, 27.3024, 15.4562, 258.052, -25.9245, 24.3609, 258.052, 8.65292, -23.7144, 257.656, 98.3969, -91.1768, -283.851, -34.8231, 6.57941, 258.052, -34.8231, 15.4562, 249.147)
+
+[sub_resource type="GDScript" id="GDScript_38k8q"]
+script/source = "extends AudioStreamPlayer3D
+
+
+
+func _on_finished() -> void:
+	self.queue_free()
+	pass # Replace with function body.
+"
+
+[node name="Orca" type="RigidBody3D" node_paths=PackedStringArray("deathSound")]
+collision_layer = 3
+collision_mask = 3
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+gravity_scale = 0.0
+custom_integrator = true
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_k137o")
+deathSound = NodePath("DeathSound")
+
+[node name="MeshOrca" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+mesh = ExtResource("1_3ceo4")
+surface_material_override/0 = SubResource("StandardMaterial3D_gqgtu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_k137o")
+
+[node name="DeathSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_38k8q")
+script = SubResource("GDScript_38k8q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="DeathSound" to="DeathSound" method="_on_finished"]

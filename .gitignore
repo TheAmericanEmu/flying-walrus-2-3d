@@ -1,16 +1,33 @@
-# Godot 4+ specific ignores
+# Godot-specific files and folders
 .godot/
-.nomedia
+.mono/ # For C# projects
+export_presets.cfg # Contains sensitive export credentials in Godot 3, optional in Godot 4
+*.import # Old import format, Godot 4 uses .godot/
+*.translation # If generated during export and not meant for source control
 
-# Godot-specific ignores
-.import/
-export.cfg
-export_credentials.cfg
+# User-specific editor settings
+.vscode/ # If using VS Code and you don't want to share workspace settings
+.idea/ # If using IntelliJ IDEA or other JetBrains IDEs
+editor/
+project_metadata.cfg
+editor_layout.cfg
 
-# Imported translations (automatically generated from CSV files)
-*.translation
+# Build artifacts and temporary files
+bin/
+build/
+Builds/
+temp/
+*.pck
+*.exe
+*.zip
+*.rar
+*.7z
+*.tar.gz
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
+# Large files (consider Git LFS for these if needed)
+# *.blend
+# *.psd
+# *.aseprite
+# *.ogg
+# *.wav
+# *.mp3

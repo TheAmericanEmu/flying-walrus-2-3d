@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://de8ruoaggj420"]
+
+[ext_resource type="Texture2D" uid="uid://bc4jofnaug3cm" path="res://Data/Animals/Walrus/Tex_Walrus.png" id="1_sj482"]
+[ext_resource type="ArrayMesh" uid="uid://j47j5vs04502" path="res://Data/Animals/Walrus/Mesh_Walrus.obj" id="2_ivsnk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1mo6"]
+albedo_texture = ExtResource("1_sj482")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshWalrus" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.581951, 0, 1.034)
+material_override = SubResource("StandardMaterial3D_x1mo6")
+mesh = ExtResource("2_ivsnk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.551398, 0, 0.834242, 0, 1, 0, -0.834242, 0, 0.551398, 39.4518, 26.1309, 164.393)

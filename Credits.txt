@@ -1,0 +1,81 @@
+
+
+Crew:
+	Progamers:
+		Colin "TheAmericanEmu" Harrington-Ding 
+			
+	Supporters:
+		My Girlfriend
+	
+	Play Tester:
+		Dino223667
+		vivi176chaos
+		My Girlfriend
+							
+Game Assets:
+	
+	Meshes:
+		Cloud by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/44cGXp6_8WD)
+
+		Walrus by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/2ivrvruGzxc)
+
+		Killer Whale by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/7pqZEQ9b_E-)
+
+		Jetpack by Roman Miller [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/8VafbXInymc)
+
+		Grave Stone by Jarlan Perez [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/4wvz0NJ33k3)
+
+		Trumpet by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/dKjB2Gm4-rj)
+		
+		Blackboard by jeremy [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/duhtFXbJCfc)
+		
+		Hat by Cael Wood [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/2Givq4Q3YTH)
+		
+		Orchid by Poly by Google [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/ef9ozEPNGk5)
+		
+		Feeling Crabby by Anonymous [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/fdvCZS-mwQW)
+
+		Missile by Jarlan Perez [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/1Xid2Qhqn2s)
+		
+		Pickup Health by Quaternius (https://poly.pizza/m/ijqVDSeIM5)
+
+	UI:
+		Skull & Battery : SunGraphica
+		
+		PS4 Buttons © 2020 by ArksDigital is licensed under CC BY 4.0
+		
+
+	Sound:
+		Good Jetpack sound Loop by MostyXS -- https://freesound.org/s/512815/ -- License: Creative Commons 0
+		
+		missile_explosion.wav by smcameron -- https://freesound.org/s/51467/ -- License: Attribution 4.0
+
+		Main Theme.mp3 by Cnupoc -- https://freesound.org/s/449640/ -- License: Creative Commons 0
+		
+		damage by ash_rez -- https://freesound.org/s/518887/ -- License: Creative Commons 0
+		
+		Hurt00.wav by jeremysykes -- https://freesound.org/s/341245/ -- License: Creative Commons 0
+		
+		gun lee enfield 303 rifle fire shot loud badass crispy.wav by kyles -- https://freesound.org/s/450852/ -- License: Creative Commons 0
+		
+		Spinning motor; close.wav by cfedorek16 -- https://freesound.org/s/660560/ -- License: Creative Commons 0
+		
+		Bam.wav by Augdog -- https://freesound.org/s/210164/ -- License: Attribution 4.0
+		
+		Coin Ca-ching! by AKkingStudio -- https://freesound.org/s/684165/ -- License: Creative Commons 0
+		
+		btn_hover.wav by rayolf -- https://freesound.org/s/405160/ -- License: Creative Commons 0
+		
+		music elevator by Jay_You -- https://freesound.org/s/460432/ -- License: Attribution 4.0
+		
+		missile lock on sound by Alxy -- https://freesound.org/s/189327/ -- License: Creative Commons 0
+		
+		Rocket Launch by Jarusca -- https://freesound.org/s/521377/ -- License: Creative Commons 0
+		
+		Heart collect/Healing (Retro) by ReincarnatedEchoes -- https://freesound.org/s/644306/ -- License: Attribution 4.0
+
+	Fonts:
+		TypeWriter Font by Q_x: https://opengameart.org/content/old-typewriter-font -- License: CC0
+		
+		Howdybun by mabro: https://www.dafont.com/howdybun.font -- License: CC0
+		

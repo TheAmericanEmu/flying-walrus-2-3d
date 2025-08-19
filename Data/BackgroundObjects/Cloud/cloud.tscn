@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://crh0cggn3oofm"]
+
+[ext_resource type="Script" uid="uid://b63oklgucul0x" path="res://Code/cloud.gd" id="1_to4cf"]
+[ext_resource type="ArrayMesh" uid="uid://bvvoaoxap5dwa" path="res://Data/BackgroundObjects/Cloud/cloud.obj" id="2_s7aos"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_to4cf")
+
+[node name="Cloud" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.239157, 0, 0, 0, 0.235359, 0, 0, 0, 0.13829, 0, 0, 0)
+mesh = ExtResource("2_s7aos")

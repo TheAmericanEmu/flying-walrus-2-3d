@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://dt5fjjdtg2gk3"]
+
+[ext_resource type="ArrayMesh" uid="uid://d2gbqjq682ftj" path="res://Data/Animals/crab_missiles/model.obj" id="1_apum5"]
+[ext_resource type="Script" uid="uid://djhelxihyplsc" path="res://Code/crab_missiles.gd" id="1_ke7na"]
+[ext_resource type="ArrayMesh" uid="uid://kgjbw3l1sk0v" path="res://Data/BackgroundObjects/rocket/model.obj" id="3_2gjnv"]
+[ext_resource type="Material" uid="uid://dbtsbo53rul1m" path="res://Data/Particles/Jetpack.tres" id="4_b8djs"]
+[ext_resource type="AudioStream" uid="uid://deyjlc6hj12bb" path="res://Data/Sound/JetBackAccel.mp3" id="5_b8djs"]
+[ext_resource type="AudioStream" uid="uid://5hvpt8mvqb8d" path="res://Data/Sound/missile_fire.mp3" id="6_paphh"]
+[ext_resource type="AudioStream" uid="uid://c08254rk4gvw8" path="res://Data/Sound/boom.wav" id="7_paphh"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_paphh"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k0gbw"]
+size = Vector3(2.22168, 1.30078, 3.94043)
+
+[node name="crab_missiles" type="RigidBody3D" node_paths=PackedStringArray("death_sound") groups=["Killable", "Missile"]]
+disable_mode = 2
+collision_layer = 3
+collision_mask = 3
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+contact_monitor = true
+max_contacts_reported = 200
+script = ExtResource("1_ke7na")
+boost_timer_delay = 2
+death_sound = NodePath("boom")
+
+[node name="Crab" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.809485, 0, -0.469766, 0, 1.11739, 0, 0.488371, 0, 0.778647, 0.030841, -0.0890992, 0.040869)
+mesh = ExtResource("1_apum5")
+
+[node name="Rocket" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.00401184, -0.34617, 0, 0.560629, 0.00247718, 0, 0, 0, 0.48873, 0.166062, -0.25485, 0.0206673)
+mesh = ExtResource("3_2gjnv")
+
+[node name="Left" type="GPUParticles3D" parent="Rocket"]
+transform = Transform3D(0.999999, -1.58325e-08, -2.84217e-14, 1.30385e-08, 0.999999, -1.42109e-14, -1.42109e-14, -1.42109e-14, 1, -0.0683035, -1.7964, -0.0962275)
+amount = 20
+process_material = ExtResource("4_b8djs")
+draw_pass_1 = SubResource("SphereMesh_paphh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_k0gbw")
+
+[node name="run" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_b8djs")
+
+[node name="Fire" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_paphh")
+
+[node name="boom" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_paphh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

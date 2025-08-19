@@ -1,0 +1,120 @@
+[gd_resource type="JSON" format=3 uid="uid://txgwyaol2p00"]
+
+[resource]
+data = {
+"assets": {
+"fonts": [{
+"author": "Q_x",
+"license": "CC0",
+"name": "TypeWriter Font",
+"url": "https://opengameart.org/content/old-typewriter-font"
+}, {
+"author": "mabro",
+"license": "CC0",
+"name": "Howdybun",
+"url": "https://www.dafont.com/howdybun.font"
+}],
+"meshes": [{
+"author": "Poly by Google",
+"license": "CC-BY",
+"name": "Cloud",
+"url": "https://poly.pizza/m/44cGXp6_8WD"
+}, {
+"author": "Poly by Google",
+"license": "CC-BY",
+"name": "Walrus",
+"url": "https://poly.pizza/m/2ivrvruGzxc"
+}, {
+"author": "Poly by Google",
+"license": "CC-BY",
+"name": "Killer Whale",
+"url": "https://poly.pizza/m/7pqZEQ9b_E-"
+}, {
+"author": "Roman Miller",
+"license": "CC-BY",
+"name": "Jetpack",
+"url": "https://poly.pizza/m/8VafbXInymc"
+}, {
+"author": "Jarlan Perez",
+"license": "CC-BY",
+"name": "Grave Stone",
+"url": "https://poly.pizza/m/4wvz0NJ33k3"
+}, {
+"author": "Poly by Google",
+"license": "CC-BY",
+"name": "Trumpet",
+"url": "https://poly.pizza/m/dKjB2Gm4-rj"
+}, {
+"author": "jeremy",
+"license": "CC-BY",
+"name": "Blackboard",
+"url": "https://poly.pizza/m/duhtFXbJCfc"
+}, {
+"author": "Cael Wood",
+"license": "CC-BY",
+"name": "Hat",
+"url": "https://poly.pizza/m/2Givq4Q3YTH"
+}],
+"sounds": [{
+"author": "MostyXS",
+"license": "CC0",
+"name": "Good Jetpack Sound Loop",
+"url": "https://freesound.org/s/512815/"
+}, {
+"author": "smcameron",
+"license": "CC BY 4.0",
+"name": "Missile Explosion",
+"url": "https://freesound.org/s/51467/"
+}, {
+"author": "Cnupoc",
+"license": "CC0",
+"name": "Main Theme.mp3",
+"url": "https://freesound.org/s/449640/"
+}, {
+"author": "ash_rez",
+"license": "CC0",
+"name": "Damage",
+"url": "https://freesound.org/s/518887/"
+}, {
+"author": "jeremysykes",
+"license": "CC0",
+"name": "Hurt00.wav",
+"url": "https://freesound.org/s/341245/"
+}, {
+"author": "kyles",
+"license": "CC0",
+"name": "Lee Enfield Rifle Fire",
+"url": "https://freesound.org/s/450852/"
+}, {
+"author": "cfedorek16",
+"license": "CC0",
+"name": "Spinning Motor; Close",
+"url": "https://freesound.org/s/660560/"
+}, {
+"author": "Augdog",
+"license": "CC BY 4.0",
+"name": "Bam.wav",
+"url": "https://freesound.org/s/210164/"
+}, {
+"author": "AKkingStudio",
+"license": "CC0",
+"name": "Coin Ca-ching!",
+"url": "https://freesound.org/s/684165/"
+}],
+"ui": [{
+"author": "SunGraphica",
+"license": "Custom or Unknown",
+"name": "Skull & Battery"
+}, {
+"author": "ArksDigital",
+"license": "CC BY 4.0",
+"name": "PS4 Buttons",
+"year": 2020.0
+}]
+},
+"crew": {
+"play_testers": ["Dino223667", "vivi176chaos", "My Girlfriend"],
+"programmers": ["Colin \"TheAmericanEmu\" Harrington-Ding"],
+"supporters": ["My Girlfriend"]
+}
+}

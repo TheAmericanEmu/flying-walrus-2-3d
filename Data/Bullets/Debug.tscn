@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://by5jqpmsfu2jl"]
+
+[ext_resource type="Script" uid="uid://sdqxhyquyfa" path="res://Code/Bullet.gd" id="1_ea4o3"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ea4o3"]
+top_radius = 0.1
+radial_segments = 63
+rings = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qwdnr"]
+albedo_color = Color(0.928641, 2.55093e-06, 1.54018e-06, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o2vi0"]
+
+[node name="Bullet" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+custom_integrator = true
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_ea4o3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.61725e-09, -0.353943, 4.78749e-09, 0, -1.54713e-08, -0.109525, 0.100894, 2.6722e-08, -3.61445e-16, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ea4o3")
+surface_material_override/0 = SubResource("StandardMaterial3D_qwdnr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_o2vi0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.947406, 3.77826e-06, 1.73271e-06, 1)
+light_energy = 7.985
+light_indirect_energy = 6.425
+light_size = 1.0
+light_specular = 0.795
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

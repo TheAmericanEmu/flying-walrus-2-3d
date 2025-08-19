@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba63ewst83a6s"]
+
+[ext_resource type="Texture2D" uid="uid://blcpeq0rlyuyh" path="res://Data/Headshoot/WalrusHeadShot.png" id="1_fgew8"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nnxmb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="OtherCharacter" type="Sprite2D" parent="."]
+position = Vector2(1153, 0)
+scale = Vector2(500, 541.889)
+texture = SubResource("PlaceholderTexture2D_nnxmb")
+
+[node name="Walrus" type="Sprite2D" parent="."]
+position = Vector2(-1153, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_fgew8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(643.25, 696.75)

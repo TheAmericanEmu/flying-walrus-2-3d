@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvvoaoxap5dwa"
+path="res://.godot/imported/cloud.obj-cb3c62caf9af2b82ac1eb3b3fe22301f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cloud.obj-cb3c62caf9af2b82ac1eb3b3fe22301f.mesh"]
+
+source_file="res://Data/BackgroundObjects/Cloud/cloud.obj"
+dest_files=["res://.godot/imported/cloud.obj-cb3c62caf9af2b82ac1eb3b3fe22301f.mesh", "res://.godot/imported/cloud.obj-cb3c62caf9af2b82ac1eb3b3fe22301f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

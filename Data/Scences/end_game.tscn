@@ -1,0 +1,608 @@
+[gd_scene load_steps=49 format=3 uid="uid://byosgubb582qi"]
+
+[ext_resource type="Script" uid="uid://rvijdnanghex" path="res://Code/end_game_died.gd" id="1_5gmi7"]
+[ext_resource type="ArrayMesh" uid="uid://usa03m26hde4" path="res://Data/BackgroundObjects/Grave/model.obj" id="1_gkccc"]
+[ext_resource type="ArrayMesh" uid="uid://cgvgdhit75lkb" path="res://Data/BackgroundObjects/Fence/Fence_01_Graveyard.obj" id="2_5gmi7"]
+[ext_resource type="Texture2D" uid="uid://bof6nqnxj8gua" path="res://Data/Textures/BookUI/paper.jpg" id="4_4tn66"]
+[ext_resource type="AudioStream" uid="uid://blo2ig43fpujv" path="res://Data/Sound/bam.wav" id="4_6ymvt"]
+[ext_resource type="Texture2D" uid="uid://bc4jofnaug3cm" path="res://Data/Animals/Walrus/Tex_Walrus.png" id="4_nwknn"]
+[ext_resource type="ArrayMesh" uid="uid://j47j5vs04502" path="res://Data/Animals/Walrus/Mesh_Walrus.obj" id="5_5qpo5"]
+[ext_resource type="FontFile" uid="uid://dd7jbx1x1xyxs" path="res://Data/Fonts/typewriter.otf" id="5_6ymvt"]
+[ext_resource type="AudioStream" uid="uid://dpeo4j5625vku" path="res://Data/Sound/counter_noise.mp3" id="5_62h3i"]
+[ext_resource type="ArrayMesh" uid="uid://c4j36omcf8hi8" path="res://Data/Tools/Trumpet/Trumpet.obj" id="6_gabvc"]
+[ext_resource type="AudioStream" uid="uid://bguu6h3fc1nef" path="res://Data/Sound/taps_song.mp3" id="7_5qpo5"]
+[ext_resource type="Script" uid="uid://booybv7w74i08" path="res://Code/number_counter.gd" id="7_2604n"]
+[ext_resource type="Script" uid="uid://cxxref8wwfiqo" path="res://Code/close_pop_up.gd" id="9_rt0c7"]
+[ext_resource type="Script" uid="uid://bpmur1nb5n17v" path="res://Code/discord_rpc.gd" id="13_xxrf5"]
+[ext_resource type="Texture2D" uid="uid://diqgp7at8trml" path="res://Data/BackgroundObjects/Orchid/Orchids_BaseColor.png" id="14_x8pfi"]
+[ext_resource type="ArrayMesh" uid="uid://mba2cal2ws48" path="res://Data/BackgroundObjects/Orchid/Orchids.obj" id="15_rt0c7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ihxfl"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_fbvj0"]
+sky_material = SubResource("ProceduralSkyMaterial_ihxfl")
+
+[sub_resource type="Environment" id="Environment_nwknn"]
+background_mode = 2
+sky = SubResource("Sky_fbvj0")
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5qpo5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5gmi7"]
+albedo_color = Color(0.0196078, 0.215686, 0.00392157, 1)
+normal_enabled = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_akula"]
+
+[sub_resource type="Gradient" id="Gradient_erte8"]
+offsets = PackedFloat32Array(0, 0.0928962, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.631035, 0.631035, 0.631035, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_p07bm"]
+noise_type = 5
+frequency = 0.0415
+offset = Vector3(753.62, 0, 0)
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ogf6b"]
+as_normal_map = true
+bump_strength = 2.9
+color_ramp = SubResource("Gradient_erte8")
+noise = SubResource("FastNoiseLite_p07bm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6rm6g"]
+albedo_color = Color(0.183502, 0.137658, 0.0496428, 1)
+metallic_specular = 0.0
+normal_enabled = true
+normal_scale = -2.13
+normal_texture = SubResource("NoiseTexture2D_ogf6b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8pfi"]
+albedo_color = Color(0.469639, 0.370417, 0.180877, 1)
+metallic_specular = 0.0
+normal_enabled = true
+normal_scale = -2.13
+normal_texture = SubResource("NoiseTexture2D_ogf6b")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_gabvc"]
+
+[sub_resource type="Compositor" id="Compositor_4tn66"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2604n"]
+texture = ExtResource("4_4tn66")
+
+[sub_resource type="LabelSettings" id="LabelSettings_62h3i"]
+font = ExtResource("5_6ymvt")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxrf5"]
+font = ExtResource("5_6ymvt")
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ymvt"]
+font = ExtResource("5_6ymvt")
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4tn66"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t8kur"]
+font = ExtResource("5_6ymvt")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxrf5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x8pfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rt0c7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_akula"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_erte8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p07bm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_62h3i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogf6b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rm6g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8yi0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8kur"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tn66"]
+albedo_texture = ExtResource("4_nwknn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8yi0"]
+albedo_texture = ExtResource("14_x8pfi")
+
+[node name="end_game" type="Node3D" node_paths=PackedStringArray("name_label", "summary_label", "Cam", "bam_soud", "taps", "misson_report", "mobile_skip_button", "skip_label")]
+transform = Transform3D(1.00118, 0, 0, 0, 1.00118, 0, 0, 0, 1.00118, 0, 0, 0)
+script = ExtResource("1_5gmi7")
+name_label = NodePath("MeshInstance3D/PlayerName")
+summary_label = NodePath("MeshInstance3D/Summary")
+Cam = NodePath("Camera3D")
+bam_soud = NodePath("Camera3D/Bam")
+taps = NodePath("Node3D/taps")
+misson_report = NodePath("Control/Mission_Report")
+mobile_skip_button = NodePath("Control/Moblie_Skip")
+skip_label = NodePath("Control/KeybordSkip")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nwknn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.725374, 0.201255, -0.658277, 0, 0.956305, 0.292372, 0.688355, 0.212079, -0.693679, 0, 0, 0)
+light_energy = 4.25
+shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(11.4892, 0, 0, 0, 1, 0, 0, 0, 9.91652, -0.00218896, 0.00229457, -0.00056903)
+mesh = SubResource("PlaneMesh_5qpo5")
+surface_material_override/0 = SubResource("StandardMaterial3D_5gmi7")
+
+[node name="Dirt" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.58225e-10, -0.96358, -0.00384936, -3.42279e-08, -0.0128999, 0.287535, -0.783115, 0, -1.25697e-08, -1.22332, -0.0416989, -0.00353801)
+mesh = SubResource("CapsuleMesh_akula")
+surface_material_override/0 = SubResource("StandardMaterial3D_6rm6g")
+
+[node name="Dirt2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.0476e-10, -1.02854, -0.00284116, -3.7704e-08, -0.0137695, 0.212226, -0.862644, 0, -9.2775e-09, -1.22332, -0.0416989, -0.00353801)
+mesh = SubResource("CapsuleMesh_akula")
+surface_material_override/0 = SubResource("StandardMaterial3D_x8pfi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00330428, 0.459051, -0.00796027)
+mesh = ExtResource("1_gkccc")
+
+[node name="Here Lies" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(-1.26678e-08, 0, -1.00052, 0, 0.20154, 0, 0.289806, 0, -4.37342e-08, -0.135134, 0.143496, -0.00721161)
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(1, 1, 0, 0)
+text = "Here Lies"
+font_size = 24
+
+[node name="PlayerName" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(-1.748e-08, 0, -1.01911, 0, 0.286121, 0, 0.399895, 0, -4.45465e-08, -0.135134, 0.0421712, -0.00721161)
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(1, 1, 0, 0)
+text = "Captain Coldtusk"
+font_size = 40
+autowrap_mode = 3
+width = 300.0
+
+[node name="Summary" type="Label3D" parent="MeshInstance3D"]
+transform = Transform3D(-1.748e-08, 0, -1.01911, 0, 0.286121, 0, 0.399895, 0, -4.45465e-08, -0.135134, -0.142806, -0.00721161)
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(1, 1, 0, 0)
+text = "\"In the great battle against the orcas, this noble walrus slew {Insert Kills} before he was sadly felled by an orca.\""
+font_size = 15
+autowrap_mode = 2
+width = 200.0
+
+[node name="Fence" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4821, 0, 0)
+
+[node name="Fence01Graveyard" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, -9.30647)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard2" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, -6.38409)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard3" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, -3.47523)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard4" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, -0.491845)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard5" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, 2.35626)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard6" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, 5.28265)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard7" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, 8.19615)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Fence01Graveyard8" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-2.84674e-08, 0, 0.483658, 0, 0.629979, 0, -0.651258, 0, -2.11414e-08, 0, 0, 11.1534)
+mesh = ExtResource("2_5gmi7")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.00788401, -0.151451, -0.988433, -0.00120797, 0.988465, -0.151446, 0.999968, 1.16419e-10, -0.00797602, -0.386255, 0.225674, 0)
+keep_aspect = 0
+attributes = SubResource("CameraAttributesPractical_gabvc")
+compositor = SubResource("Compositor_4tn66")
+fov = 62.283
+
+[node name="Bam" type="AudioStreamPlayer3D" parent="Camera3D"]
+stream = ExtResource("4_6ymvt")
+
+[node name="coin_counter" type="AudioStreamPlayer3D" parent="Camera3D"]
+stream = ExtResource("5_62h3i")
+volume_db = 26.025
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Mission_Report" type="Panel" parent="Control"]
+texture_repeat = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -322.0
+offset_right = 250.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2604n")
+
+[node name="Title" type="Label" parent="Control/Mission_Report"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 17.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "Misson Name Goes Here"
+label_settings = SubResource("LabelSettings_62h3i")
+
+[node name="Agent" type="Label" parent="Control/Mission_Report"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -106.0
+offset_top = 39.0
+offset_right = 114.0
+offset_bottom = 64.0
+grow_horizontal = 2
+text = "Agent:"
+label_settings = SubResource("LabelSettings_xxrf5")
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Control/Mission_Report" node_paths=PackedStringArray("counter_noise")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -190.0
+offset_right = -60.0
+offset_bottom = -165.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Score:"
+label_settings = SubResource("LabelSettings_6ymvt")
+script = ExtResource("7_2604n")
+counter_noise = NodePath("../../../Camera3D/coin_counter")
+
+[node name="TotalKills" type="Label" parent="Control/Mission_Report" node_paths=PackedStringArray("counter_noise")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -164.0
+offset_right = -62.0
+offset_bottom = -139.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Total Kills:"
+label_settings = SubResource("LabelSettings_6ymvt")
+script = ExtResource("7_2604n")
+counter_noise = NodePath("../../../Camera3D/coin_counter")
+
+[node name="Kills" type="Tree" parent="Control/Mission_Report"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 29.0
+offset_top = -195.0
+offset_right = 274.0
+offset_bottom = 42.0
+grow_vertical = 2
+focus_mode = 0
+theme_override_colors/title_button_color = Color(0, 0, 0, 1)
+theme_override_colors/children_hl_line_color = Color(0, 0, 0, 1)
+theme_override_colors/parent_hl_line_color = Color(0, 0, 0, 1)
+theme_override_colors/relationship_line_color = Color(0, 0, 0, 1)
+theme_override_colors/guide_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/drop_position_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hovered_dimmed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hovered_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/custom_button_font_highlight = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_6ymvt")
+theme_override_fonts/title_button_font = ExtResource("5_6ymvt")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4tn66")
+columns = 2
+allow_search = false
+hide_root = true
+scroll_horizontal_enabled = false
+scroll_vertical_enabled = false
+auto_tooltip = false
+
+[node name="Cash" type="Label" parent="Control/Mission_Report" node_paths=PackedStringArray("counter_noise")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = 61.0
+offset_right = -175.0
+offset_bottom = 86.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "Cash:"
+label_settings = SubResource("LabelSettings_t8kur")
+script = ExtResource("7_2604n")
+counter_noise = NodePath("../../../Camera3D/coin_counter")
+
+[node name="returnMenu" type="Button" parent="Control/Mission_Report"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -44.0
+offset_right = 67.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_6ymvt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xxrf5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_x8pfi")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rt0c7")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_akula")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_erte8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_p07bm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_62h3i")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ogf6b")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6rm6g")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_j8yi0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t8kur")
+text = "Return To Menu"
+
+[node name="KeybordSkip" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -112.5
+offset_top = -23.0
+offset_right = 112.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "You can press \"space\" to skip"
+
+[node name="Moblie_Skip" type="Button" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = -32.0
+offset_right = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SKIP"
+
+[node name="name_menu" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -85.0
+offset_right = 130.5
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="name_enter" type="LineEdit" parent="Control/name_menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -15.5
+offset_right = -6.0
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+placeholder_text = "UserName"
+alignment = 1
+caret_blink = true
+
+[node name="Label" type="Label" parent="Control/name_menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -11.5
+offset_right = 72.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Name"
+
+[node name="Button" type="Button" parent="Control/name_menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -55.0
+offset_top = -42.0
+offset_right = 55.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Submit Score"
+
+[node name="Label2" type="Label" parent="Control/name_menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.5
+offset_top = 10.0
+offset_right = 26.5
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Online"
+
+[node name="pop_up" type="Panel" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -85.0
+offset_right = 130.5
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/pop_up"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -11.5
+offset_right = 23.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/pop_up"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.5
+offset_top = 17.0
+offset_right = 23.5
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "Online Data Send"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Control/pop_up"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -55.0
+offset_top = -42.0
+offset_right = 55.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Close"
+script = ExtResource("9_rt0c7")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshWalrus" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(0.00871385, 0, -0.004906, 0, 0.01, 0, 0.004906, 0, 0.00871385, 1.29318, 0.569381, -2.95679)
+material_override = SubResource("StandardMaterial3D_4tn66")
+mesh = ExtResource("5_5qpo5")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="Trumpet" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-0.000448305, 0, -0.000893881, 0, 0.001, 0, 0.000893881, 0, -0.000448305, 0.559449, 0.821827, -1.54026)
+mesh = ExtResource("6_gabvc")
+skeleton = NodePath("../../root/@EditorNode@21272/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11482/@VSplitContainer@11134/@HSplitContainer@11136/@HSplitContainer@11138/@Control@11139/@SubViewportContainer@11140/@SubViewport@11141/EndGame")
+
+[node name="taps" type="AudioStreamPlayer3D" parent="Node3D"]
+stream = ExtResource("7_5qpo5")
+autoplay = true
+
+[node name="Discord_rpc" type="Node" parent="."]
+script = ExtResource("13_xxrf5")
+
+[node name="Orchids" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0855663, 0, -0.0517534, 0, 0.1, 0, 0.0517534, 0, -0.0855663, -0.250812, -0.00902217, 0.231899)
+material_override = SubResource("StandardMaterial3D_j8yi0")
+mesh = ExtResource("15_rt0c7")
+
+[connection signal="score_publish_status" from="." to="." method="_on_score_publish_status"]
+[connection signal="update_discordRPC" from="." to="Discord_rpc" method="update_rpc"]
+[connection signal="pressed" from="Control/Mission_Report/returnMenu" to="." method="_on_return_menu_pressed"]
+[connection signal="pressed" from="Control/name_menu/Button" to="." method="on_online_submit"]
+[connection signal="pressed" from="Control/pop_up/Button" to="Control/pop_up/Button" method="_on_pressed"]
